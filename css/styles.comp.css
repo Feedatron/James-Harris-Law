@@ -1,0 +1,22 @@
+:root {
+  --gray: #393E46;
+  --dark-gray: #222831;
+  --font-color: #EEEEEE;
+  --font-color-2: #b1b1b1;
+  --accent-color: #00dce7;
+  --accent-color-2: #00b0b9;
+  --button-hover: #575757;
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }

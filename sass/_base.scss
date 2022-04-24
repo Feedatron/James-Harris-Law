@@ -1,0 +1,27 @@
+:root {
+    --dark-blue: rgb(28, 39, 100);
+    --yellow: #d4af36;
+    --white: #fff;
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1 rem = 10 px
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    overflow-x: hidden;
+}
