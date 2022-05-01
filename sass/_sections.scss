@@ -2,11 +2,6 @@
     
     &__main {
         position: relative;
-        background-image: url(../img/lighthouse_splash.jpg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        
-        background-size: cover;
         width: 100%;
         height: 80vh;
         
@@ -84,6 +79,7 @@
             p {
                 margin-left: 2.5rem;
                 font-size: 2rem;
+                font-weight: 700;
             }
             svg {
                 width: 4rem !important;
@@ -96,7 +92,7 @@
 
 .bio {
     width: 100%;
-    background-color: #E2E2D3;
+    background-color: var(--tan);
     display: flex;
     position: relative;
 
@@ -122,4 +118,178 @@
             justify-content: center;
         }
     }
+}
+
+.main {
+    padding: 5rem 10rem;
+    background-color: var(--white);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &__container {
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #000;        
+        font-size: 20px;
+        a:hover {
+            &::before {
+                display: none;
+            }
+        }
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            color: #000;        
+            font-size: 20px;
+            a:hover {
+                &::before {
+                    display: none;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+
+            li {
+
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+                &::before {
+                    content: "\2022";
+                    color: var(--yellow);
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 25px;
+                    margin-left: -25px;
+                }
+            }
+        }
+
+        span {
+            font-weight: 700;
+            margin-top: 2rem;
+        }
+
+        &-imgs {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            padding: 0 0 2rem 0;
+
+            img {
+                max-width:40rem;
+                height: auto;
+                border: 3px solid var(--yellow);
+            }
+        }
+
+        &-content {
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+.contact {
+    margin: 0 auto;
+    height: 60rem;
+    width: 60rem;
+    padding: 5rem;
+    border-radius: 3px;
+    position: relative;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+    &__disc {
+        margin-bottom: 5rem;
+        font-size: 2rem;
+        color: var(--yellow);
+    }
+
+    &__form {
+        
+        
+    }
+
+    &__side {
+
+        position: absolute;
+        transition: all .8s ease;
+        top: 0;
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        background-color: var(--dark-blue);
+        padding: 5rem;
+        width: 100%;
+        height: 60rem;
+
+        &-front {
+
+        }
+        &-back {
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            h1 {
+                color: var(--yellow);
+                font-size: 4rem;
+                margin-bottom: 2rem;
+            }
+            p {
+                color: var(--white);
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.pa {
+
+    &-row {
+        height: 25rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &:not(:last-child) {
+            border-bottom: 2px solid #bfbfb2;
+        }
+        
+
+        a {
+            text-decoration: none;
+            width: min-content;
+            white-space: nowrap;
+
+            &::before {
+                display: none;
+            }
+
+            &:hover h1 {
+                color: var(--yellow);
+                transition: color .2s ease-in-out;
+            }
+        }
+    }
+
 }

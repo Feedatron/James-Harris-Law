@@ -2,7 +2,8 @@
   --dark-blue: rgb(28, 39, 100);
   --yellow: #d4af36;
   --white: #fff;
-  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3); }
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --tan: #E2E2D3; }
 
 * {
   margin: 0;
@@ -58,8 +59,10 @@ a:hover::before {
       padding: 1rem 2rem; } }
   .nav__left {
     display: flex;
-    align-items: center;
-    justify-content: center; }
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    margin-top: 10px; }
     .nav__left-logo {
       font-size: 5rem;
       cursor: pointer;
@@ -75,7 +78,6 @@ a:hover::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
     height: 100%;
     display: flex;
     align-items: flex-end; }
@@ -114,7 +116,7 @@ a:hover::before {
   .nav__contacts {
     position: absolute;
     top: .5rem;
-    right: 5rem;
+    right: 10rem;
     display: flex; }
     .nav__contacts-box {
       display: flex;
@@ -164,6 +166,13 @@ a:hover::before {
       content: '';
       margin-top: -8px; }
 
+.nav-color {
+  background-color: var(--dark-blue) !important; }
+
+.nav-active {
+  color: var(--yellow) !important;
+  opacity: 1 !important; }
+
 #nav-toggle:checked + .nav__container .nav__container-button::before {
   margin-top: 0;
   transform: rotate(45deg); }
@@ -175,12 +184,25 @@ a:hover::before {
   margin-top: 0;
   transform: rotate(-45deg); }
 
+.header-title {
+  background-color: var(--yellow);
+  padding: 1rem 10rem; }
+  .header-title h1 {
+    color: var(--white);
+    font-size: 2.5rem; }
+
+.relative {
+  position: relative; }
+
 .color-overlay {
   position: absolute;
   z-index: 10;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), transparent); }
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), transparent), url(../img/lighthouse_splash.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .section-title {
   font-size: 36px;
@@ -194,6 +216,8 @@ a:hover::before {
   font-weight: 400;
   color: #000;
   font-size: 20px; }
+  .section-text a:hover::before {
+    display: none; }
 
 .section-logo {
   position: absolute;
@@ -302,6 +326,9 @@ a:hover::before {
     .footer__left-contacts-row svg {
       color: var(--yellow);
       margin-right: 1rem; }
+    .footer__left-contacts-row a {
+      color: var(--white);
+      text-decoration: none; }
   .footer__right-row {
     display: flex;
     justify-content: flex-end; }
@@ -319,12 +346,64 @@ a:hover::before {
         .footer__right-row-container a:before {
           background-color: var(--yellow); }
 
+.form {
+  display: flex;
+  flex-direction: column; }
+  .form__input {
+    margin-bottom: 1.5rem;
+    border-radius: 3px;
+    height: 3.5rem;
+    padding-left: 5px;
+    transition: height .100s ease-in-out;
+    border: none;
+    box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.3); }
+    .form__input:focus, .form__input:focus-within {
+      height: 4.5rem;
+      outline: none; }
+  .form__message {
+    margin-bottom: 1.5rem;
+    border-radius: 3px;
+    padding: 5px 0 0 5px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.3); }
+  .form__submit {
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 5rem;
+    cursor: pointer;
+    color: #000;
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--yellow);
+    transition: all 100ms ease-in;
+    box-shadow: 1px 0.8rem 0.8rem 0.5rem rgba(0, 0, 0, 0.3); }
+    .form__submit:hover {
+      background: var(--yellow);
+      box-shadow: 1px 1.2rem 1.2rem 0.5rem rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px); }
+    .form__submit:focus {
+      outline: none;
+      border: 3px var(--font-color) solid; }
+
+.billboard {
+  position: relative; }
+  .billboard img {
+    height: 65rem;
+    width: 100%;
+    object-fit: cover; }
+  .billboard-title {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    background-color: var(--yellow);
+    color: var(--white);
+    padding: 1rem 5rem 1rem 10rem;
+    font-size: 1.8rem;
+    box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.3); }
+
 .header__main {
   position: relative;
-  background-image: url(../img/lighthouse_splash.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
   height: 80vh;
   object-fit: cover; }
@@ -384,7 +463,8 @@ a:hover::before {
         margin-bottom: 3rem; }
       .about__right-row p {
         margin-left: 2.5rem;
-        font-size: 2rem; }
+        font-size: 2rem;
+        font-weight: 700; }
       .about__right-row svg {
         width: 4rem !important;
         height: 3rem;
@@ -392,7 +472,7 @@ a:hover::before {
 
 .bio {
   width: 100%;
-  background-color: #E2E2D3;
+  background-color: var(--tan);
   display: flex;
   position: relative; }
   .bio__content {
@@ -410,3 +490,113 @@ a:hover::before {
       display: flex;
       flex-direction: column;
       justify-content: center; }
+
+.main {
+  padding: 5rem 10rem;
+  background-color: var(--white);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; }
+  .main__container {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #000;
+    font-size: 20px; }
+    .main__container a:hover::before {
+      display: none; }
+    .main__container p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      color: #000;
+      font-size: 20px; }
+      .main__container p a:hover::before {
+        display: none; }
+      .main__container p:not(:last-child) {
+        margin-bottom: 2rem; }
+    .main__container ul {
+      list-style: none; }
+      .main__container ul:not(:last-child) {
+        margin-bottom: 2rem; }
+      .main__container ul li:not(:last-child) {
+        margin-bottom: 1rem; }
+      .main__container ul li::before {
+        content: "\2022";
+        color: var(--yellow);
+        font-weight: bold;
+        display: inline-block;
+        width: 25px;
+        margin-left: -25px; }
+    .main__container span {
+      font-weight: 700;
+      margin-top: 2rem; }
+    .main__container-imgs {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      padding: 0 0 2rem 0; }
+      .main__container-imgs img {
+        max-width: 40rem;
+        height: auto;
+        border: 3px solid var(--yellow); }
+    .main__container-content:not(:last-child) {
+      margin-bottom: 2rem; }
+
+.contact {
+  margin: 0 auto;
+  height: 60rem;
+  width: 60rem;
+  padding: 5rem;
+  border-radius: 3px;
+  position: relative;
+  perspective: 150rem;
+  -moz-perspective: 150rem; }
+  .contact__disc {
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    color: var(--yellow); }
+  .contact__side {
+    position: absolute;
+    transition: all .8s ease;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: var(--dark-blue);
+    padding: 5rem;
+    width: 100%;
+    height: 60rem; }
+    .contact__side-back {
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; }
+      .contact__side-back h1 {
+        color: var(--yellow);
+        font-size: 4rem;
+        margin-bottom: 2rem; }
+      .contact__side-back p {
+        color: var(--white);
+        font-size: 2rem; }
+
+.pa-row {
+  height: 25rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .pa-row:not(:last-child) {
+    border-bottom: 2px solid #bfbfb2; }
+  .pa-row a {
+    text-decoration: none;
+    width: min-content;
+    white-space: nowrap; }
+    .pa-row a::before {
+      display: none; }
+    .pa-row a:hover h1 {
+      color: var(--yellow);
+      transition: color .2s ease-in-out; }

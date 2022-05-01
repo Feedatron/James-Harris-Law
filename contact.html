@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | James Harris</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="index.js" defer></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav nav-color relative" id="nav">
+            <div class="nav__left">
+                <a href="index.html" class="nav__left-logo">James <span>Harris.</span></a>
+            </div>
+            <div class="nav__right">
+                <input type="checkbox" id="nav-toggle">
+                <label for="nav-toggle" class="nav__container">
+                    <div class="nav__container-button"></div>
+                </label>
+                <ul class="nav__right-list" id="navList">
+                    <li class="nav__right-list--item">
+                        <a href="/about.html">About</a>
+                    </li>
+                    <li class="nav__right-list--item">
+                        <a href="/practice-areas.html">Practice Areas</a>
+                    </li>
+                    <li class="nav__right-list--item">
+                        <a href="/contact.html" class="nav-active">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav__contacts">
+                <div class="nav__contacts-box">
+                    <i class="fas fa-phone"></i>
+                    <a href="#" class="nav__contacts-box-link">999-999-9999</a>
+                </div>
+                <div class="nav__contacts-box">
+                    <i class="fas fa-envelope"></i>
+                    <a href="#" class="nav__contacts-box-link">jhlaw@law.com</a>
+                </div>
+            </div>
+        </nav>
+        <div class="header-title">
+            <h1>Contact Us</h1>
+        </div>      
+    </header>
+
+    <main class="main">
+        <div class="contact">
+            <div class="contact__side contact__side-front" id="front">
+                <div class="contact__disc">
+                    <h1>Have A Case? We Can Help.</h1>
+                </div>
+                <div class="contact__form">
+                    <form class="form" name="contactform" id="contact-form">
+                        <input type="text" name="name" class="form__input" placeholder="Enter your name" required>
+                        <input type="email" name="email" class="form__input" placeholder="Enter your Email" required>
+                        <input type="text" name="phone" class="form__input" placeholder="Enter your Phone" required>
+                        <input type="text" name="address" class="form__input" placeholder="Enter your Address" required>       
+                        <textarea name="message" cols="30" rows="10" class="form__message" placeholder="What is your message?" required></textarea>
+                        <button type="button" class="form__submit" id="submit-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="contact__side contact__side-back" id="back">
+                <h1>Thank you for reaching out</h1>
+                <p>We will try to get back in touch with you as soon as we can. In the meantime, feel free to read more about our firm and what we cover.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__left">
+            <h3 class="footer__left-title">James Harris, LLP</h3>
+            <div class="footer__left-contacts">
+                <div class="footer__left-contacts-row">
+                    <i class="fas fa-phone"></i>
+                    <a href="#">999-999-9999</a>
+                </div>
+                <div class="footer__left-contacts-row">
+                    <i class="fas fa-envelope"></i>        
+                    <a href="#">jhlaw@law.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__right">
+            <div class="footer__right-row">
+                <p>&copy; James Harris, LLP</p>
+            </div>
+            <div class="footer__right-row">
+                <div class="footer__right-row-container">
+                    <a href="/legal-disclaimer.html">Legal Disclaimer</a>
+                    <span> | </span>
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
