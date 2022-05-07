@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | James Harris</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="index.js" defer></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </head>
@@ -51,48 +52,93 @@
 
     <main class="main">
         <div class="main__container">
-            <p class="section-text">While origniating far from the sea, James was drawn into a career with the U.S. Navy. James was stationed at the naval base, Naval Station Fake, located in the San Fransico Bay. Then a few years later was stationed on a battleship homeported in Mobile, AL.</p>
-            <p class="section-text">In 1990 decided to began his civilian legal career after moving to the suburbs of Washington, D.C.</p>
-            <p class="section-text">While in Washing D.C., James continued his service in the naval reserve with military value of devotion and dedication to the mission assigned.</p>
-            <p class="section-text">In his freetime, he likes to take his canoe to rivers he has not explored and kayak. James is also very passionate about cars and takes great pride in his Alpha Romeo 4C.</p>
-            <div class="main__container-imgs">
-                <img src="img/about-1.jpg" alt="James Harris">
-                <img src="img/about-2.jpg" alt="Kayaking">
-                <img src="img/about-3.jpg" alt="Car">
-            </div>
-            <p class="section-text">James established James Harris, LLP, to focus on providing maritime law counsel and respresnetation to law firms and individual clients. James now bring the same dedication to the firm's clients and matters as he applied in his mmilitary assignments and previous civilan positions - prompt and cogent advice, objective analysis, considered judgement and zealous advocacy.</p>
+            <p>While origniating far from the sea, James was drawn into a career with the U.S. Navy. James was stationed at the naval base, Naval Station Fake, located in the San Fransico Bay. Then a few years later was stationed on a battleship homeported in Mobile, AL.</p>
+            <p>In 1990 decided to began his civilian legal career after moving to the suburbs of Washington, D.C.</p>
+            <p>While in Washing D.C., James continued his service in the naval reserve with military value of devotion and dedication to the mission assigned.</p>
+            <p>In his freetime, he likes to take his canoe to rivers he has not explored and kayak. James is also very passionate about cars and takes great pride in his Alpha Romeo 4C.</p>
+            <!-- <div class="main__container-imgs">
+                <div class="main__container-imgs-wrapper">
+                    <img src="img/about-1.jpg" alt="James Harris">
+                </div>
+                <div class="main__container-imgs-wrapper">
+                    <img src="img/about-2.jpg" alt="Kayaking">
+                </div>
+                <div class="main__container-imgs-wrapper">
+                    <img src="img/about-3.jpg" alt="Car">
+                </div>   
+            </div> -->
+
+
+            <div id="about-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#about-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#about-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#about-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <div class="carousel-img-wrapper">
+                        <img src="img/about-alpha.jpg" class="d-block w-100" alt="...">
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="carousel-img-wrapper">
+                        <img src="img/about-river.jpg" class="d-block w-100" alt="...">
+                      </div>   
+                  </div>
+                  <div class="carousel-item">
+                      <div class="carousel-img-wrapper">
+                        <img src="img/about-battleship.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#about-carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#about-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+
+            <p>James established James Harris, LLP, to focus on providing maritime law counsel and respresnetation to law firms and individual clients. James now bring the same dedication to the firm's clients and matters as he applied in his mmilitary assignments and previous civilan positions - prompt and cogent advice, objective analysis, considered judgement and zealous advocacy.</p>
             <h1 class="section-title">Additional Information</h1>
-            <p class="section-text">For details about the practice at James Harris LLP, please refer to the <a href="/practice-areas.html">practice area pages</a>. To request additional information or schedule a consultation, please call 999-999-9999 or send and email to <a href="#">jhlaw@law.com</a></p>
+            <p>For details about the practice at James Harris LLP, please refer to the <a href="/practice-areas.html">practice area pages</a>. To request additional information or schedule a consultation, please call 999-999-9999 or send and email to <a href="#">jhlaw@law.com</a></p>
             
         </div>
     </main>
 
     <footer class="footer">
-        <div class="footer__left">
-            <h3 class="footer__left-title">James Harris, LLP</h3>
-            <div class="footer__left-contacts">
-                <div class="footer__left-contacts-row">
-                    <i class="fas fa-phone"></i>
-                    <a href="#">999-999-9999</a>
-                </div>
-                <div class="footer__left-contacts-row">
-                    <i class="fas fa-envelope"></i>        
-                    <a href="#">jhlaw@law.com</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer__right">
-            <div class="footer__right-row">
-                <p>&copy; James Harris, LLP</p>
-            </div>
-            <div class="footer__right-row">
-                <div class="footer__right-row-container">
-                    <a href="/legal-disclaimer.html">Legal Disclaimer</a>
-                    <span> | </span>
-                    <a href="/privacy-policy.html">Privacy Policy</a>
+        <div class="footer__container">
+            <div class="footer__left">
+                <h3 class="footer__left-title">James Harris, LLP</h3>
+                <div class="footer__left-contacts">
+                    <div class="footer__left-contacts-row">
+                        <i class="fas fa-phone"></i>
+                        <a href="#">999-999-9999</a>
+                    </div>
+                    <div class="footer__left-contacts-row">
+                        <i class="fas fa-envelope"></i>        
+                        <a href="#">jhlaw@law.com</a>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="footer__right">
+                <div class="footer__right-row">
+                    <p>&copy; James Harris, LLP</p>
+                </div>
+                <div class="footer__right-row">
+                    <div class="footer__right-row-container">
+                        <a href="/legal-disclaimer.html">Legal Disclaimer</a>
+                        <span> | </span>
+                        <a href="/privacy-policy.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

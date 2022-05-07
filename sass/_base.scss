@@ -1,5 +1,5 @@
 :root {
-    --dark-blue: rgb(28, 39, 100);
+    --dark-blue: #1c2764;
     --yellow: #d4af36;
     --white: #fff;
     --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
@@ -48,4 +48,19 @@ a {
   a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
+  }
+
+  p, li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #000;        
+    font-size: 20px;
+    margin-bottom: 0;
+
+    @media only screen and (max-width: 1100px) {
+        font-size: 18px;
+     }
+     @media only screen and (max-width: 450px) {
+       font-size: 14px;
+     }
   }
