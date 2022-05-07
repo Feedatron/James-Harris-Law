@@ -651,59 +651,6 @@
       }
   }
 
-  .form {
-    display: flex;
-    flex-direction: column;
-
-    &__input {
-        margin-bottom: 1.5rem;
-        border-radius: 3px;
-        height: 3.5rem;
-        padding-left: 5px;
-        transition: height .100s ease-in-out;
-        border: none;
-        box-shadow: 1px 3px 3px 3px rgba(0,0,0, 0.3);
-
-        &:focus,
-        &:focus-within {
-            height: 4.5rem;
-            outline: none;
-        }
-    }
-
-    &__message {
-        margin-bottom: 1.5rem;
-        border-radius: 3px;
-        padding: 5px 0 0 5px;
-        outline: none;
-        border: none;
-        box-shadow: 1px 3px 3px 3px rgba(0,0,0, 0.3);
-    }
-
-    &__submit {
-        border: 3px solid transparent;
-        border-radius: 3px;
-        height: 5rem;
-        cursor: pointer;
-        color: #000;
-        font-size: 2rem;
-        font-weight: 700;
-        background: var(--yellow);
-        transition: all 100ms ease-in;
-        box-shadow: 1px .8rem .8rem .5rem rgba(0,0,0, 0.3);
-
-        &:hover {
-            background: var(--yellow);
-            box-shadow: 1px 1.2rem 1.2rem .5rem rgba(0,0,0, 0.2);
-            transform: translateY(-2px);
-        }
-
-        &:focus {
-            outline: none;
-            border: 3px var(--font-color) solid;
-        }
-    }
-}
 
 .billboard {
     position: relative;
