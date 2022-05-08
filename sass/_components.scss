@@ -39,7 +39,7 @@
             transition:  color 200ms ease-in-out;   
             transition: border .1s cubic-bezier(1,.18,.93,.66);
             &:hover {
-                color: var(--white);
+                color: var(--white) !important;
             }
             span {
                 color: var(--yellow);
